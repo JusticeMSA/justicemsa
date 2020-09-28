@@ -12,6 +12,7 @@
 
 body {
   overflow-x: hidden !important;
+  z-index: -1;
 }
 
 /*=========================
@@ -442,7 +443,7 @@ header .flex-container .navigation .menu-btn div {
   position: relative;
   padding: 50px 0;
   background: #E5E5E5;
-  z-index: -2;
+  z-index: 1;
 }
 
 .section-three .container, .section-three .container-reverse {

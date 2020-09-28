@@ -6,6 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Home | Justice M</title>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        </script>
 </head>
 <body>
     
@@ -16,10 +42,10 @@
             <div class="navigation">
                 <div class="nav-links">
                     <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">PORTFOLIO</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#portfolio">PORTFOLIO</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="menu-btn">
@@ -33,7 +59,7 @@
     <!-- END -->
 
     <!-- SECTION ONE -->
-    <section class="section-one pad">
+    <section class="section-one pad" id="home">
         <div class="flex-container">
             <div class="left">
                 <img src="assets/images/liquid.svg" alt="">
@@ -50,10 +76,11 @@
 
 
     <!-- SECTION TWO -->
-    <section class="section-two">
+    <section class="section-two" id="about">
+        <br><br><br><br><br>
         <h2>WHO AM I?</h2>
         <div class="container">
-            <img src="assets/images/+27 74 311 3947 20190819_205559.jpg" alt="">
+            <img src="assets/images/96317731_2872247366227826_5617471315091914752_o.jpg" alt="">
             <div class="p-container">
                 <p>My name is Justice Mlangeni. I am a front-end developer 
                     based in  Benoni, South Africa. I fell inlove with software 
@@ -72,43 +99,48 @@
     <!-- END -->
 
     <!-- SECTION THREE -->
-    <section class="section-three">
+    <section class="section-three" id="portfolio">
+        <br><br><br><br><br>
         <h2>MY WORK</h2>
         <div class="container">
-            <img src="assets/images/sty.jpg" alt="">
+           <a href="/about" style="display: block;"><img src="assets/images/sty.jpg" alt=""></a>
             <div class="description">
                 <h5>BEHOLDER</h5>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis culpa alias nostrum possimus quas?
+                    This is a project I worked on in the front-end team dealing with the responsiveness of the website <br>
+                    
                 </p>
             </div>
         </div>
 
         <div class="container-reverse">
-            <img src="assets/images/hug-insurance.jpg" alt="">
+            <a href="https://www.huginsurance.com.au/#!/"><img src="assets/images/hug-insurance.jpg" alt=""></a>
             <div class="description">
                 <h5>HUG INSURANCE</h5>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis culpa alias nostrum possimus quas?
+                    This is my first international gig. During this project I was assigned a 
+                    task to restructure the design in a team of three and I worked on a tight deadline which took 3 months to finish.
                 </p>
             </div>
         </div>
 
         <div class="container">
-            <img src="assets/images/portfolio-beholder.jpg" alt="">
+           <a href="https://netcafetechnologies.business.site/?utm_source=gmb&utm_medium=referral"><img src="assets/images/sto.jpg" alt=""></a> 
             <div class="description">
-                <h5>BEHOLDER</h5>
+                <h5>NET CAFE</h5>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis culpa alias nostrum possimus quas?
+                    Netcafe is a south african chain of internet cafe's operating in he eastrand of south africa the client wanted 
+                    something small and within a low budget.
                 </p>
             </div>
         </div>
-        <a href="#" class="section-btn">MORE PROJECTS</a>
+        <a href="https://github.com/JusticeMSA" class="section-btn">MORE PROJECTS</a>
     </section>
     <!-- END -->
 
     <!-- SECTION FOUR -->
-    <section class="section-four">
+    <section class="section-four" id="contact">
+        <br><br><br><br><br>
         <h2>GET IN TOUCH</h2>
 
         <form action="">
